@@ -1,0 +1,43 @@
+/* *{
+    margin: 20px;
+} */
+
+/* Login Component */
+
+.login-container{
+    background-color: rgb(158, 148, 148);
+    height: 700px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-form{
+    width: 50%;
+    height: 50%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: #dcdada;
+}
+.login-form h1{
+    margin-left: 250px;
+}
+.login-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+  }
+.button-container {
+    margin-top: 100px; /* Adjust the spacing as needed */
+  }

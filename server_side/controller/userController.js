@@ -37,33 +37,30 @@ const userRegister = async(req,res) => {
 }
 } 
 
-
 //     USER LOGIN
 
 const userLogin = async(req,res) =>{
     const { email, password } = req.body;
-   
-    try{
+    console.log('ddddddddddddddddd');
         
     if (!email || !password) {
         return res.status(400).json({ error: "Email and password are required." });
     }
     
-    const user = await User.findOne({ email });
-    console.log(user);
+    const user = await User?.findOne({ email });
 
     if (!user) {
         return res.status(401).json({ error: "Invalid Email or Password" });
     }
-    const isPasswordValid = await bcrypt.compare(password,user.password)
+    const isPasswordValid = password === user.password
+    console.log(isPasswordValid,'hhhhhhhhhhhhhhhhhhhhhh');
 
-    if(!isPasswordValid){
-       return res.status(401).json({error: "Invalid Email or Password"})
-    }
-}catch(error){
-    res.status(500).json({ error: "Error while registering user" });
-}
-
+     if(isPasswordValid === false){
+        return res.status(401).json({error: "Invalid Email or Password"})
+     }else{
+        return res.status(200).json('success')
+     }
 }
 
 module.exports.userRegister = userRegister
+module.exports.userLogin = userLogin

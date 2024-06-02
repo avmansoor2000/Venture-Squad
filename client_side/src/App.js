@@ -1,14 +1,10 @@
 import React from 'react';
-import Header from '../src/components/userComponents/header'
-import Banner from './components/userComponents/banner'
-// import NextEvent from './components/userComponents/nextEvent'
+import Login from '../src/components/userComponents/login'
 
 const App = () => {
   return (
     <>
-  <Header/>
-  <Banner/>
-  {/* <NextEvent/> */}
+  <Login/>
   </>
   )
 };
